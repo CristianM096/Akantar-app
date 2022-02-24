@@ -206,7 +206,7 @@
                   }
                 }
 
-                Hash.go("page/" + page).update();
+                Hash.go("{% static 'page/' %}" + page).update();
 
                 if (page == 1 || page == pages) $(".sample-docs .tabs").hide();
               },
@@ -260,8 +260,8 @@
 
       yepnope({
         test: Modernizr.csstransforms,
-        yep: ["{% static '../../lib/turn.min.js' %}", "{% static 'css/jquery.ui.css' %}"],
-        nope: ["{% static '../../lib/turn.html4.min.js' %}", "{% static 'css/jquery.ui.html4.css' %}"],
+        yep: ["{% static 'lib/turn.min.js' %}", "{% static 'css/jquery.ui.css' %}"],
+        nope: ["{% static 'lib/turn.html4.min.js' %}", "{% static 'css/jquery.ui.html4.css' %}"],
         both: ["{% static 'css/docs.css' %}", "{% static 'js/docs.js' %}"],
         complete: loadApp,
       });

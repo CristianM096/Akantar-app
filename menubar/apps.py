@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 
-class HomeConfig(AppConfig):
+class MenubarConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'home'
-    varbose_name = 'home'
+    name = 'menubar'
+    varbose_name = 'menubar'

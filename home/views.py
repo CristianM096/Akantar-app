@@ -4,5 +4,3 @@ from django.shortcuts import render
 def home_view(request):
     return render(request,'home/index.html')
 
-def page_view(request):
-    return render(request,'home/page1.html')

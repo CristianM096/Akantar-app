@@ -293,7 +293,7 @@ iframe {
 
 .btn {
   font-weight: 600;
-  border-width: 1px;
+  border: 1px solid #1283bc;
   font-style: normal;
   margin: 0.6rem 0.6rem;
   white-space: normal;

@@ -5,6 +5,7 @@
 
 
 body {
+  margin: 0;
   font-family: Jost;
 }
 .display-1 {
@@ -273,7 +274,7 @@ body {
 .btn-black,
 .btn-black:active {
   background-color: #232323 !important;
-  border-color: #232323 !important;
+  border-color: #1283bc;
   color: #ffffff !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }

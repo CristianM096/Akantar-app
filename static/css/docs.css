@@ -20,6 +20,11 @@ body{
 	transition: transform 1s;
 }
 
+.solicit-buttom input{
+	border: 2px solid red;
+	border-radius: 8px;
+}
+
 .animated{
 	-webkit-transition:margin-left 0.2s ease-in-out;
 	-moz-transition:margin-left 0.2s ease-in-out;
