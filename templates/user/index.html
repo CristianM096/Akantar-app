@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link
+  rel="shortcut icon"
+  href="{% static 'assets/images/a-kantar-karaoke-logo-n.png' %}"
+  type="image/x-icon"
+  />
+  <meta name="description" content="" />
+  <link 
+    rel="stylesheet"
+    href="{% static 'mycss/style.css' %}"/>
+  <!--CDN de font awesome-->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+  <title>AKantarKb</title>
+</head>
+<body>
+  <div>
+    <a href="{% url 'home' %}">
+      <img
+        src="{% static 'assets/images/a-kantar-karaoke-logo-n.png' %}"
+        alt="Mobirise"
+        style="height: 8rem"
+      />
+    </a>
+  </div >
+  <div class="container">
+    <form class="form-container" action="">
+      <h1>Solicita la cancion que deseas cantar o escuchar</h1>
+      <label for="search">Titulo de la cancion o nombre del artista*</label>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" id="search" name="search" placeholder="">
+      <h2>¿Para cantar o escuchar?*</h2>
+      <div>
+        <input type="radio" id="radioE" name="radio" value="Escuchar">
+        <label for="radio"> Escuchar</label>
+      </div>
+      <div>
+        <input type="radio" id="radioS" name="radio" value="Escuchar">
+        <label for="radioS"> Cantar</label>
+      </div>     
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+</body>
+</html>
