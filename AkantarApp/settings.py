@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home',
     'menubar',
     'user',
+    'song',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+YOUTUBE_DATA_API_KEY = 'AIzaSyDUfRK6WODJQDLcf-Pg1buGYAGpl4ivLlA'
