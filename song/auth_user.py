@@ -14,7 +14,7 @@ def fun_aut_user():
     
 
     appflow = flow.InstalledAppFlow.from_client_secrets_file(
-        'F:\Python\Akantar-App2\Akantar-app\song\client_secret.json', scopes
+        'C:\DjangoApps\Proyecto2\Akantar-app\song\client_secret.json', scopes
     )
     appflow.run_console()
     # if launch_browser:

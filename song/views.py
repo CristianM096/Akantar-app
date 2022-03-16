@@ -1,7 +1,8 @@
+from django.contrib import messages
 from multiprocessing import context
 from urllib import response
 import requests
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.conf import settings
 from isodate import parse_duration
 from .models import Song
@@ -25,7 +26,7 @@ def index(request):
 
         s_params = {
             'part' : 'snippet',
-            'q' : request.POST['search']+'karaoke',
+            'q' : request.POST['search']+ request.POST['type'],
             'key' : settings.YOUTUBE_DATA_API_KEY,
             'maxResults' : 9,
             'type' : 'video',
@@ -78,7 +79,7 @@ def listV(request, video_id):
         body={
              'snippet': {
                   #id de play list de tu lista
-                  'playlistId': 'PLcGeBi5OTxZNzYv4nVAQCuIJZchhHSl_x', 
+                  'playlistId': 'PLs2eAFVS7NucMRkWUnB0mOo2eTOoqKWLE', 
                   'name': 'miLista',
                    'resourceId': {
                            'kind': 'youtube#video',
@@ -88,6 +89,7 @@ def listV(request, video_id):
                 }
         }
     ).execute()
-    print(requests)
     
-    return render(request,'song/list.html')
+    messages.success(request, 'La cancion que solicito se agrego correctamente, Gracias.')
+    print(request)
+    return redirect('song')
